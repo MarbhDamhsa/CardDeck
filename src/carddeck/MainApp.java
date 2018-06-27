@@ -1,14 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *    Creates, shuffles, and prints out a deck of cards
  */
 package carddeck;
 
-/**
- *
- * @author jay
- */
 public class MainApp {
         public static void main(String[] args){
         Deck deck = new Deck();
@@ -16,4 +10,4 @@ public class MainApp {
         //print out the deck.
         System.out.println(deck.getDeck());
     }
-}
+}//MainApp

@@ -5,14 +5,14 @@ import java.util.*;
 public class Deck {
     ArrayList<Card> cards = new ArrayList<Card>();
 
-    String[] values = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
-    String[] suit = {"Club", "Spade", "Diamond", "Heart"};
+    enum Values {ACE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JACK,QUEEN,KING;}
+    enum Suit {HEARTS, SPADES, DIAMONDS, CLUBS;}
 
     static boolean firstThread = true;
     public Deck(){
-        for (int i = 0; i<suit.length; i++) {
-            for(int j=0; j<values.length; j++){
-                this.cards.add(new Card(suit[i],values[j]));
+        for (Suit s : Suit.values()) {
+            for(Values v : Values.values()){
+                this.cards.add(new Card(s.name(),v.name()));
             }
         }
         //shuffle the deck when its created
